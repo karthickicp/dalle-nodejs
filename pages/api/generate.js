@@ -1,7 +1,7 @@
 import { Configuration, OpenAIApi } from "openai";
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "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",
 });
 const openai = new OpenAIApi(configuration);
 
@@ -84,6 +84,7 @@ export const generateImages = async () => {
     n: 4,
     size: "256x256",
   });
+  getBase64FromUrl('https://oaidalleapiprodscus.blob.core.windows.net/private/org-MWjozX4bIe2lPYAsyr3s70Xk/user-kxhu6DGgStGrLrwOjRf8AR5n/img-VjHMcHukPExJlP5ZKgevlvZH.png?st=2023-02-23T17%3A30%3A14Z&se=2023-02-23T19%3A30%3A14Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-02-23T02%3A53%3A31Z&ske=2023-02-24T02%3A53%3A31Z&sks=b&skv=2021-08-06&sig=n6p8Rf2kDa/2i1hBfIci3dmH067QdR%2BZxUr7H57AkQo%3D').then(res => console.log(res))
   return response.data;
 };
 
@@ -101,4 +102,3 @@ const getBase64FromUrl = async (url) => {
   });
 }
 
-getBase64FromUrl('https://oaidalleapiprodscus.blob.core.windows.net/private/org-MWjozX4bIe2lPYAsyr3s70Xk/user-kxhu6DGgStGrLrwOjRf8AR5n/img-wD2VW52U2P3TI8Zghsd8QC2b.png?st=2023-02-23T17%3A02%3A42Z&se=2023-02-23T19%3A02%3A42Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-02-23T02%3A52%3A44Z&ske=2023-02-24T02%3A52%3A44Z&sks=b&skv=2021-08-06&sig=YFjZImsCPkQBDzjpEYKdHO0qGiArlj58vFTjJcOyma8%3D').then(res => console.log(res))
